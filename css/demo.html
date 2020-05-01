@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Orbit Demo</title>
+		
+		<!-- Use the ID of your slider here to avoid the flash of unstyled content -->
+	  	<style type="text/css">
+	  		#featured { width: 940px; height: 450px; background: #009cff url('orbit/loading.gif') no-repeat center center; overflow: hidden; }
+	  		/* Want a different Loading GIF - visit http://www.webscriptlab.com/ - that's where we go this one :) */
+	  	</style>
+		
+		<!-- Attach our CSS -->
+	  	<link rel="stylesheet" href="orbit.css">	
+	  	
+		<!--[if IE]>
+			<style type="text/css">
+				.timer { display: none !important; }
+				div.caption { background:transparent; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);zoom: 1; }
+			</style>
+		<![endif]-->
+	  	
+		<!-- Attach necessary scripts -->
+		<script type="text/javascript" src="jquery-1.4.1.min.js"></script>
+		<script type="text/javascript" src="jquery.orbit.min.js"></script>
+		
+		<!-- Run the plugin -->
+		<script type="text/javascript">
+			$(window).load(function() {
+				$('#featured').orbit({
+					'bullets': true,
+					'timer' : true,
+					'animation' : 'horizontal-slide'
+				});
+			});
+		</script>
+		
+	</head>
+	<body>
+		<div id="featured"> 
+			<img src="link.jpg" alt="Link" />
+			<a href="http://www.zurb.com/playground" target="_blank"><img src="ezio.jpg" alt="Ezio" rel="ezioCaption" /></a>
+			<img src="masterchief.jpg" alt="Master Chief" />
+			<img src="marcusfenix.jpg"  alt="Marcus Fenix" rel="marcusCaption" />
+		</div> 
+		<span class="orbit-caption" id="ezioCaption">This is an <em>awesome caption</em> for Ezio. <strong>Note:</strong> This whole image is linked</span>
+		<span class="orbit-caption" id="marcusCaption">This is an <em>awesome caption</em> for Marcus with a <a href="http://www.zurb.com/playground" target="_blank" style="color: #fff">link</a></span>
+		
+	</body>
+</html>
